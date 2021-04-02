@@ -1,15 +1,10 @@
-let dynamicRoutes = () => {
-  return new Promise(resolve => {
-    resolve(data.map(el => `items/${el.id}`))
-  })
-}
 
 export default {
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -61,9 +56,5 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  },
-
-  generate: {
-    routes: dynamicRoutes
   }
 }
